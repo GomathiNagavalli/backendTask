@@ -22,3 +22,7 @@ app.listen(PORT, async () => {
     console.error('Unable to connect to the database:', error);
   }
 });
+
+app.get("/", async(req, res) => {
+  res.status(200).send({message:"db running"})
+})
