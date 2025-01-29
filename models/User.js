@@ -6,6 +6,9 @@ const User = sequelize.define('User', {
   email: { type: DataTypes.STRING, unique: true, allowNull: false },
   password: { type: DataTypes.STRING, allowNull: false },
   designation: { type: DataTypes.STRING, allowNull: false },
-});
+},{
+  freezeTableName:true
+}
+);
 
 module.exports = User;
